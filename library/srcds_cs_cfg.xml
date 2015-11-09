@@ -1,19 +1,92 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <server.cfg game="cssource" mode="regular" lang="ru_RU">
 	<section alias="main">
-		<option name="hostname" default="My Server"></option>
-		<option name="sv_password" default=""></option>
-		<option name="rcon_password" default="myrcon123"></option>
-		<option name="sv_rcon_banpenalty" default="15"></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
-		<option name="" default=""></option>
+		<option name="hostname" vartype="string" default="My Server">Название сервера</option>
+		<option name="sv_password" vartype="string" default="">Пароль сервра, если в кавычек пусто, то сервер без пароля</option>
+		<option name="rcon_password" vartype="string" default="myrcon123">Задать rcon-пароль для удалённого управления сервером</option>
+		<option name="sv_rcon_banpenalty" vartype="number" default="15">Количество минут на которое банится игрок пытавшийся подобрать rcon-пароль к серверу</option>
+		<option name="sv_rcon_maxfailures" vartype="number" default="5">Максимальное количество неверных попыток при наборе rcon-пароля, после истечения которых игрок будет забанен</option>
+		<option name="sv_rcon_minfailuretime" vartype="number" default="30">Количество секунд для определения неверной rcon-аутенфикации</option>
+		<option name="sv_rcon_minfailures" vartype="number" default="5">Количество попыток при наборе rcon-пароля во время заданное sv_rcon_minfailuretime, после истечения которых игрок будет забанен</option>
+	</section>
+	<section alias="mp">
+		<option name="mp_allowNPCs" vartype="binary" default="0">Разрешить NPC на сервере</option>
+		<option name="mp_allowspectators" vartype="binary" default="1">Разрешить игрокам после смерти наблюдать за другими игроками</option>
+		<option name="mp_autocrosshair" vartype="binary" default="0">Разрешить автоприцеливание</option>
+		<option name="mp_autokick" vartype="binary" default="0">Разрешить автокик за убийство игроков своей команды</option>
+		<option name="mp_autoteambalance" vartype="binary" default="1">Разрешить автоматическую балансировку команд</option>
+		<option name="mp_buytime" vartype="number" default="0.15">Время покупки в минутах</option>
+		<option name="mp_c4timer" vartype="number" default="35">Время таймера бомбы</option>
+		<option name="mp_chattime" vartype="number" default="10">Время, в течении которого игроки смогут разговаривать между собой после окончания текущей карты</option>
+		<option name="mp_decals" vartype="number" default="200">Количество разрешённых декалей [спреи, пятна крови, пулевые отверстия</option>
+		<option name="mp_fadetoblack" vartype="binary" default="0">После смерти экран становится чёрным, не давая игроку смотреть за другими игроками в режиме наблюдения 1-вкл. 0-выкл.</option>
+		<option name="mp_falldamage" vartype="binary" default="1">Урон от падения</option>
+		<option name="mp_flashlight" vartype="binary" default="1">Разрешить фонарик</option>
+		<option name="mp_forcecamera" vartype="binary" default="1">Разрешить переключения камер в режиме наблюдения</option>
+		<option name="mp_forcerespawn" vartype="binary" default="0">Команда для HL2:Deathmatch. Игрок появляется сразу после смерти</option>
+		<option name="mp_fraglimit" vartype="number" default="0">Максимальное количество фрагов, при достижении которого определённым игроком карта сменится на следующую</option>
+		<option name="mp_freezetime" vartype="number" default="3">Начальный отсчёт времени в начале каждого раунда (для покупки), в секундах</option>
+		<option name="mp_footsteps" vartype="binary" default="1">Звуки шагов</option>
+		<option name="mp_friendlyfire" default="1">Возможность атаковать своих</option>
+		<option name="mp_hostagepenalty" vartype="number" default="0">Кикает террориста при убийстве заданного лимита заложников</option>
+		<option name="mp_limitteams" vartype="number" default="1">Максимальное количество игроков команды 1 которое может превышать количество игроков в команде 2</option>
+		<option name="mp_maxrounds" vartype="number" default="0">Максимальное количество раундов на одной карте</option>
+		<option name="mp_playerid" vartype="number" default="1">Контролирует информацию которую игрок видет на панели статуса: 0 все имена; 1 только имена игроков своей команды; 2 без имён</option>
+		<option name="mp_spawnprotectiontime" vartype="number" default="10">Кикает игроков которые убивают членов своей команды в течении # секунд после перезапуска раунда</option>
+		<option name="mp_roundtime" vartype="number" default="3">Длина раунда в минутах</option>
+		<option name="mp_startmoney" vartype="number" default="800">Количество начальных денег у игроков</option>
+		<option name="mp_teamplay" vartype="binary" default="0">Команда для Half-Life 2: Deathmatch. Игра по командам [Альянс и повстанцы]</option>
+		<option name="mp_timelimit" vartype="number" default="30">Ограничение по времени на карту, в минутах</option>
+		<option name="mp_tkpunish" vartype="binary" default="0">В следующем раунде убить того, кто убил игрока своей команды</option>
+		<option name="mp_weaponstay" vartype="binary" default="0">Команда для Half-Life 2: Deathmatch. После подбирания оружия оно остаётся на месте (относится только к оружию заранее расположенному на карте разработчиками)</option>
+		<option name="mp_winlimit" vartype="number" default="0">Максимальное количество побед, после которой произойдёт смена карты</option>
+	</section>
+	<section alias="settings">
+		<option name="sv_airaccelerate" vartype="number" default="10">Определяет ускорение игрока, когда он находится в воздухе (например падает), или скольжение</option>
+		<option name="sv_downloadurl" vartype="text" default="http://localhost/cstrike">HTTP, с которого происходит скачивание контента</option>
+		<option name="sv_allowdownload" vartype="binary" default="1">Разрешить загрузку с сервера (например карт)</option>
+		<option name="sv_allowupload" vartype="binary" default="0">Разрешить загрузку на сервер (например спреев) </option>
+		<option name="sv_alltalk" vartype="binary" default="0">Разрешить всем слышать переговоры друг друга по микрофону, вне зависимости от команды</option>
+		<option name="sv_cheats" vartype="binary" default="0">Разрешить игровые читы на сервере (например: noclip)</option>
+		<option name="sv_consistency" vartype="binary" default="1">Предписывает ли сервер последовательность файла для критических файлов</option>
+		<option name="sv_contact" vartype="text" default="admin@email.com">Почта администратора сервера</option>
+		<option name="sv_enableoldqueries" vartype="binary" default="1">Разрешить поддержку старого стиля (Half-life 1) серверных запросов</option>
+		<option name="sv_friction" vartype="number" default="4">Коэффициент трения в игре</option>
+		<option name="sv_gravity" vartype="number" default="800">Гравитация в игре</option>
+		<option name="sv_maxspeed" vartype="number" default="320">Максимальная скорость игрока</option>
+		<option name="sv_maxunlag" vartype="number" default="0.5">Максимальная лагокомпенсация, в секунду</option>
+		<option name="sv_pausable" vartype="binary" default="0">Разрешить ставить паузу во время игры</option>
+		<option name="sv_region" vartype="number" default="3">Регион сервера 3 - Europe</option>
+		<option name="sv_specaccelerate" vartype="number" default="5">Ускорение при передвижения в режиме наблюдения</option>
+		<option name="sv_specnoclip" vartype="binary" default="1">Игрок в режиме наблюдения может пролетать через стены и объекты</option>
+		<option name="sv_specspeed" vartype="number" default="3">Скорость передвижения в режиме наблюдения</option>
+		<option name="sv_stats" vartype="binary" default="1">Собирать статистику использования процессора</option>
+		<option name="sv_stepsize" vartype="number" default="18">Длинна шага в юнитах</option>
+		<option name="sv_stopspeed" vartype="number" default="75">Минимальная скорость остановки на поверхности</option>
+		<option name="sv_timeout" vartype="number" default="320">Если сервер не получает отклика от клиента в течении # секунд, клиент отключается от сервера</option>
+		<option name="sv_unlag" vartype="binary" default="1">Лагокомпенсация</option>
+		<option name="sv_voiceenable" vartype="binary" default="1">Разрешить использование микрофона</option>
+		<option name="decalfrequency" vartype="number" default="60">Количество секунд до исчезновения спреев сделанных игроками</option>
+	</section>
+	<section alias="rates">
+		<option name="sv_maxrate" vartype="number" default="25000">максимальное колличество байт в секунду, которое может быть передано сервером [0 -без ограничения]</option>
+		<option name="sv_minrate" vartype="number" default="7500">минимальное колличество байт в секунду, которое может быть передано сервером [0 -без ограничения]</option>
+		<option name="sv_maxcmdrate" vartype="number" default="70">максимальное колличество обновлений [количество пакетов] которое разрешено на сервере</option>
+		<option name="sv_mincmdrate" vartype="number" default="20"></option>
+		<option name="sv_maxupdaterate" vartype="number" default="70">максимальное колличество обновлений [количество пакетов] которое разрешено на сервере</option>
+		<option name="sv_minupdaterate" vartype="number" default="20">минимальное колличество обновлений [количество пакетов] которое разрешено на сервере</option>
+		<option name="host_framerate" vartype="number" default="0">Задает sys_tickrate сервера (аналог -tickrate в ярлыке запуска)</option>
+	</section>
+	<section alias="logs">
+		<option name="log" vartype="text" default="on">Вести лог сервера</option>
+		<option name="sv_logbans" vartype="binary" default="1">Записывать в лог баны</option>
+		<option name="sv_logecho" vartype="binary" default="1">Показывать информацию из логов сервера в консоль (сервера)</option>
+		<option name="sv_logfile" vartype="binary" default="1">Записывать логи сервера в файл</option>
+		<option name="sv_log_onefile" vartype="binary" default="1">Записывать логи сервера в один файл</option>
+		<option name="mp_logmessages" vartype="binary" default="1">Записывать в лог чат игроков</option>
+		<option name="mp_logdetail" vartype="number" default="0">Записывать в лог повреждения от: 0 - выключено; 1 - противников; 2 - своих; 3 - и от противников и от своих</option>
+		<option name="breakable_multiplayer" vartype="number" default="1"></option>
+		
+		
 	</section>
 </server.cfg>
