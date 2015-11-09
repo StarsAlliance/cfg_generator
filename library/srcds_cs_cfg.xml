@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+п»ї<?xml version="1.0" encoding="UTF-8" ?>
 <server.cfg game="cssource" mode="regular" lang="ru_RU">
 	<section alias="main">
-		<option name="hostname" default="My Server">Название Вашего сервера</option>
-		<option name="sv_password" default="">Пароль сервра, если пусто, то сервер без пароля</option>
-		<option name="rcon_password" default="myrcon123">Задать rcon-пароль для удалённого управления сервером</option>
-		<option name="sv_rcon_banpenalty" default="15">Количество минут на которое банится игрок, пытавшийся подобрать rcon-пароль к серверу</option>
+		<option name="hostname" default="My Server"></option>
+		<option name="sv_password" default=""></option>
+		<option name="rcon_password" default="myrcon123"></option>
+		<option name="sv_rcon_banpenalty" default="15"></option>
 		<option name="" default=""></option>
 		<option name="" default=""></option>
 		<option name="" default=""></option>
