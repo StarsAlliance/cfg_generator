@@ -43,13 +43,13 @@
 	</section>
 	<section alias="settings">
 		<option name="sv_airaccelerate" vartype="number" default="10">Определяет ускорение игрока, когда он находится в воздухе (например падает), или скольжение</option>
-		<option name="sv_downloadurl" vartype="text" default="http://localhost/cstrike">HTTP, с которого происходит скачивание контента</option>
+		<option name="sv_downloadurl" vartype="string" default="http://localhost/cstrike">HTTP, с которого происходит скачивание контента</option>
 		<option name="sv_allowdownload" vartype="binary" default="1">Разрешить загрузку с сервера (например карт)</option>
 		<option name="sv_allowupload" vartype="binary" default="0">Разрешить загрузку на сервер (например спреев) </option>
 		<option name="sv_alltalk" vartype="binary" default="0">Разрешить всем слышать переговоры друг друга по микрофону, вне зависимости от команды</option>
 		<option name="sv_cheats" vartype="binary" default="0">Разрешить игровые читы на сервере (например: noclip)</option>
 		<option name="sv_consistency" vartype="binary" default="1">Предписывает ли сервер последовательность файла для критических файлов</option>
-		<option name="sv_contact" vartype="text" default="admin@email.com">Почта администратора сервера</option>
+		<option name="sv_contact" vartype="string" default="admin@email.com">Почта администратора сервера</option>
 		<option name="sv_enableoldqueries" vartype="binary" default="1">Разрешить поддержку старого стиля (Half-life 1) серверных запросов</option>
 		<option name="sv_friction" vartype="number" default="4">Коэффициент трения в игре</option>
 		<option name="sv_gravity" vartype="number" default="800">Гравитация в игре</option>
@@ -78,7 +78,7 @@
 		<option name="host_framerate" vartype="number" default="0">Задает sys_tickrate сервера (аналог -tickrate в ярлыке запуска)</option>
 	</section>
 	<section alias="logs">
-		<option name="log" vartype="text" default="on">Вести лог сервера</option>
+		<option name="log" vartype="string" default="on">Вести лог сервера</option>
 		<option name="sv_logbans" vartype="binary" default="1">Записывать в лог баны</option>
 		<option name="sv_logecho" vartype="binary" default="1">Показывать информацию из логов сервера в консоль (сервера)</option>
 		<option name="sv_logfile" vartype="binary" default="1">Записывать логи сервера в файл</option>
