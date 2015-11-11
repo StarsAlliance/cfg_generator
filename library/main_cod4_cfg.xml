@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<server.cfg game="cod4" mode="main" lang="ru_RU">
+	<section alias="main">
+		<option name="sv_hostname" vartype="string" default="My Server"></option>
+		<option name="rcon_password" vartype="string" default="myrcon123"></option>
+		<option name="sv_maxclients" vartype="string" default="32"></option>
+		
+	</section>
+	<section alias="admins">	
+		<option name="sets_Admin" vartype="string" default="Admin"></option>
+		<option name="sets_E-mail" vartype="string" default="admin@email.com"></option>
+		<option name="sets_Web" vartype="string" default="hllp://mysite.com"></option>
+		<option name="sets_Location" vartype="string" default="DE"></option>
+		<option name="sets_TS" vartype="string" default="ts.mysite.com"></option>
+		<option name="scr_motd" vartype="string" default="My Banner Message"></option>
+	</section>
+	<section alias="log">	
+		<option name="g_logsync" vartype="string" default="2"></option>
+		<option name="logfile" vartype="string" default="1"></option>
+		<option name="sv_log_damage" vartype="string" default="1"></option>
+	</section>	
+	<section alias="network">
+		<option name="sv_master" vartype="array" default="cod4master.activision.com|cod4authorize.activision.com|cod4master.infinityward.com|cod4update.activision.com|master.gamespy.com:28960|master0.gamespy.com|master1.gamespy.com|clanservers.net">Список Мастерсерверов cod4</option>
+		<option name="net_noipx" vartype="binary" default="1"></option>
+		<option name="sv_gamespy" vartype="binary" default="1"></option>
+		<option name="com_hunkMegs" vartype="number" default="512"></option>
+		<option name="g_antilag" vartype="binary" default="1"></option>
+		<option name="sv_timeout" vartype="number" default="300"></option>
+		<option name="sv_reconnectlimit" vartype="string" default="3"></option>
+		<option name="sv_minrate" vartype="number" default="5000"></option>
+		<option name="sv_maxRate" vartype="number" default="25000"></option>
+		<option name="sv_minPing" vartype="number" default="0"></option>
+		<option name="sv_maxping" vartype="number" default="300"></option>
+	</section>	
+	<section alias="settings">
+		<option name="g_inactivity" vartype="number" default="180"></option>
+		<option name="g_inactivityspectator" vartype="number" default="0"></option>
+		<option name="sv_zombietime" vartype="binary" default="1"></option>
+		<option name="sv_floodProtect" vartype="binary" default="1"></option>
+		<option name="cl_autocmd" vartype="binary" default="1"></option>
+		<option name="g_no_script_spam" vartype="string" default="1"></option>
+		<option name="sv_cheats" vartype="string" default="0"></option>
+		<option name="sv_pure" vartype="string" default="1"></option>
+		<option name="sv_disableClientConsole" vartype="string" default="1"></option>
+		<option name="sv_kickBanTime" vartype="string" default="3600"></option>
+		<option name="g_banIPs" vartype="string" default="0"></option>
+		<option name="sv_voice" vartype="string" default="0"></option>
+		<option name="sv_voiceQuality" vartype="string" default="1"></option>
+		<option name="voice_deadChat" vartype="string" default="0"></option>
+		<option name="voice_global" vartype="string" default="0"></option>
+		<option name="voice_localEcho" vartype="string" default="0"></option>
+		<option name="winvoice_mic_mute" vartype="string" default="0"></option>
+		<option name="g_allowvote" vartype="string" default="0"></option>
+		<option name="scr_team_fftype" vartype="string" default="0"></option>
+		<option name="scr_team_teamkillspawndelay" vartype="string" default="20"></option>
+		<option name="scr_team_kickteamkillers" vartype="string" default="5"></option>
+		<option name="scr_player_maxhealth" vartype="string" default="100"></option>
+		<option name="scr_player_healthregentime" vartype="string" default="5"></option>
+		<option name="scr_game_allowkillcam" vartype="string" default="1"></option>
+		<option name="scr_player_forcerespawn" vartype="string" default="1"></option>
+		<option name="scr_player_suicidespawndelay" vartype="string" default="0"></option>
+		<option name="ui_hud_obituaries" vartype="string" default="1"></option>
+		<option name="g_compassShowEnemies" vartype="string" default="1"></option>
+		<option name="scr_enable_hiticon" vartype="string" default="1"></option>
+		<option name="scr_shellshock" vartype="string" default="1"></option>
+		<option name="scr_player_sprinttime" vartype="string" default="4"></option>
+		<option name="scr_drawfriend" vartype="string" default="1"></option>
+		<option name="ui_hud_showobjicons" vartype="string" default="1"></option>
+		<option name="scr_enable_nightvision" vartype="string" default="0"></option>
+	</section>
+</server.cfg>
